@@ -33,7 +33,7 @@ pace:
 scenes:
   - command: node scripts/demo.mjs
     cwd:
-      repo: https://github.com/derrtaderr/revenue-sync-dev
+      repo: https://github.com/derrtaderr/stripe-to-hubspot-sync-dev
       ref: 4d8a496192e20557988ae6e278a14948474b12a6
     expect:
       exitCode: 0

@@ -8,7 +8,7 @@ import { fileURLToPath } from 'node:url';
 import { runDemo as demoInProcess, HOLD_MS, PACE_MS } from '../scripts/demo.mjs';
 
 const ROOT = fileURLToPath(new URL('..', import.meta.url));
-const ISSUES = 'https://github.com/derrtaderr/revenue-sync/issues';
+const ISSUES = 'https://github.com/derrtaderr/stripe-to-hubspot-sync/issues';
 
 // The demo is what a stranger runs first, from a fresh clone with nothing set, so it runs here
 // with an empty environment apart from PATH (and the pacing switched off, so the suite is fast).

@@ -10,7 +10,7 @@ import { makeWorld } from '../test/helpers/world.mjs';
 
 export const PACE_MS = 700;
 export const HOLD_MS = 2400; // the pause after reconcile catches the edit
-const ISSUES = 'https://github.com/derrtaderr/revenue-sync/issues';
+const ISSUES = 'https://github.com/derrtaderr/stripe-to-hubspot-sync/issues';
 const CMD = 'node bin/revenue-sync.mjs';
 
 function nodeIsNewEnough(version) {

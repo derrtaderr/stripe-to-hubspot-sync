@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="docs/demo/revenue-sync-wordmark-dark.png">
-    <img src="docs/demo/revenue-sync-wordmark-light.png" alt="revenue-sync" width="520">
+    <source media="(prefers-color-scheme: dark)" srcset="docs/demo/stripe-to-hubspot-sync-wordmark-dark.png">
+    <img src="docs/demo/stripe-to-hubspot-sync-wordmark-light.png" alt="stripe-to-hubspot-sync" width="760">
   </picture>
   <br>
   Stripe billing and product usage, or your warehouse, written to the HubSpot company and reconciled against the source.
@@ -20,8 +20,8 @@
 </p>
 
 ```bash
-git clone https://github.com/derrtaderr/revenue-sync
-cd revenue-sync
+git clone https://github.com/derrtaderr/stripe-to-hubspot-sync
+cd stripe-to-hubspot-sync
 node scripts/demo.mjs
 ```
 

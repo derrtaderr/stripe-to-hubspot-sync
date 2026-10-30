@@ -635,7 +635,7 @@ confirmation.
     back and `reconcile` passing. A `revenue-sync demo` command would need the stand-ins shipped in
     `src/` and the npm package, about 370 lines of fake API that a production install never runs, so
     the demo stays a clone-and-run script and is not in the package `files`. The cost is that
-    `npx github:derrtaderr/revenue-sync` cannot run it; the shortest command is a clone.
+    `npx github:derrtaderr/stripe-to-hubspot-sync` cannot run it; the shortest command is a clone.
 
 ## Questions the author didn't ask
 

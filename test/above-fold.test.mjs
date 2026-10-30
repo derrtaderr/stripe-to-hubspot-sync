@@ -16,7 +16,7 @@ const README = readFileSync(join(ROOT, 'README.md'), 'utf8');
 // raw lines that render as four blocks, so the cap is on raw lines and allows for that markup. What
 // it guards is unchanged: nothing but the header comes before the command.
 const FOLD = 30; // raw lines before the command block must close
-const PUBLIC = 'https://github.com/derrtaderr/revenue-sync';
+const PUBLIC = 'https://github.com/derrtaderr/stripe-to-hubspot-sync';
 
 function aboveFold() {
   const lines = README.split('\n');
@@ -46,7 +46,7 @@ const runDemo = (command) => {
 test('the README opens with the title (the wordmark, light and dark), then the one-line promise', () => {
   const { lines, title, promise } = aboveFold();
   assert.ok(title, 'the README opens with a wordmark image');
-  assert.match(title[0], /alt="revenue-sync"/);
+  assert.match(title[0], /alt="stripe-to-hubspot-sync"/);
   const before = lines.slice(0, title[1]).filter((l) => l.trim());
   assert.ok(before.every((l) => /^\s*<(p align="center"|picture|source )/.test(l)), `only the wordmark markup precedes the title: ${before}`);
   const dark = /<source media="\(prefers-color-scheme: dark\)" srcset="([^"]+-wordmark-dark\.png)">/.exec(before.join('\n'));
@@ -77,7 +77,7 @@ test('then one bash block, all of it above the fold, that clones the public repo
   const { fence, close, block } = aboveFold();
   assert.equal(fence[0], '```bash');
   assert.ok(close > 0 && close < FOLD, `the block closes on line ${close + 1}`);
-  assert.deepEqual(block, [`git clone ${PUBLIC}`, 'cd revenue-sync', 'node scripts/demo.mjs']);
+  assert.deepEqual(block, [`git clone ${PUBLIC}`, 'cd stripe-to-hubspot-sync', 'node scripts/demo.mjs']);
 });
 
 test('the command in the block runs from the repo with no environment and shows the catch', () => {
@@ -141,7 +141,7 @@ test('the user flow starts at the front door: entry point 0 and happy path step 
   const entries = flow.slice(flow.indexOf('## Entry points'), flow.indexOf('## Happy path'));
   const zero = entries.slice(entries.indexOf('0. '), entries.indexOf('1. '));
   assert.ok(entries.indexOf('0. ') >= 0 && entries.indexOf('0. ') < entries.indexOf('1. '), 'entry point 0 comes first');
-  for (const s of ['node scripts/demo.mjs', 'exit 0', 'exit 3', 'Node 20.6', 'github.com/derrtaderr/revenue-sync/issues', 'quickstart']) assert.ok(zero.includes(s), s);
+  for (const s of ['node scripts/demo.mjs', 'exit 0', 'exit 3', 'Node 20.6', 'github.com/derrtaderr/stripe-to-hubspot-sync/issues', 'quickstart']) assert.ok(zero.includes(s), s);
   const happy = flow.slice(flow.indexOf('## Happy path'), flow.indexOf('## Real-data path'));
   assert.match(happy, /\| 0 \| [^\n]*node scripts\/demo\.mjs/);
   assert.ok(happy.indexOf('| 0 |') < happy.indexOf('| 1 |'));
